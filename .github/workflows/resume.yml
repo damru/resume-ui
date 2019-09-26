@@ -1,4 +1,4 @@
-name: Web Resume CI
+name: Resume Pipeline
 
 on:
   push:
@@ -16,7 +16,7 @@ jobs:
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
-      run: chmod +x build.sh && ./build.sh
+      run: chmod +x ./build.sh && ./build.sh
   gcloud-deploy:
     runs-on: ubuntu-latest
     needs: docker-build
@@ -29,4 +29,4 @@ jobs:
         PROJECT_ID: web-resume-254010
         APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
       with:
-        args: app deploy .gcp
+        args: app deploy ./.gcp

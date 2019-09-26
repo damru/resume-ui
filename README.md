@@ -1,6 +1,6 @@
 # Resume
 
-![](https://github.com/damru/resume/workflows/Web%20Resume%20CI/badge.svg)
+![](https://github.com/damru/resume/workflows/Resume%20Pipeline/badge.svg)
 
 There are plenty platforms in the wild to host your resume, and make it look beautiful. But I like to get the job done, especially if I learn something on the way.
 
