@@ -1,0 +1,24 @@
+@import "~src/assets/scss/variables";
+
+#education {
+
+    h1 {
+        color: $theme-quaternary;
+    }
+
+    .school, .schoolbis {
+        font-weight: bold;
+    }
+
+    .minor {
+        color: $theme-quaternary;
+        font-size: $theme-font-smaller;
+    }
+
+    .eq-diploma {
+        display: block;
+        font-size: 0.75em;
+        color: $theme-font-light;
+    }
+
+}

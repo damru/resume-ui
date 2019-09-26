@@ -1,0 +1,144 @@
+/****************************
+*** bootstrap
+****************************/
+@import "~src/assets/scss/main.scss";
+
+/****************************
+*** fonts
+****************************/
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+/****************************
+*** colors
+****************************/
+.heart {
+    color: red;
+}
+
+/****************************
+*** basics
+****************************/
+body {
+    -webkit-touch-callout: none;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+
+    min-width: 440px;
+    font-size: 14px;
+    color: $theme-font;
+}
+h1, h2 {
+	padding: 10px 0;
+    font-size: 1.5em;
+}
+h1 {
+    font-size: 1.8em;
+    color: $theme-font;
+    text-transform: uppercase;
+}
+h2 {
+    font-size: 1.3em;
+    color: $theme-font;
+}
+
+a {
+    color: $theme-font-light;
+
+    &:hover {
+        color: $theme-font;
+    }
+}
+
+/****************************
+*** theme components
+****************************/
+.button-primary {
+    background-color: $theme-primary;
+    border-radius: calc(1em/3);
+    color: $theme-primary-font;
+}
+
+.button-primary-neg {
+    border: 1px solid $theme-primary;
+    background-color: $theme-primary-font;
+    border-radius: calc(1em/3);
+    color: $theme-primary;
+}
+
+.button-secondary {
+    background-color: $theme-secondary;
+    border-radius: calc(1em/3);
+    color: $theme-secondary-font;
+}
+
+.button-secondary-neg {
+    border: 1px solid $theme-secondary;
+    background-color: $theme-secondary-font;
+    border-radius: calc(1em/3);
+    color: $theme-secondary;
+}
+
+.button-tertiary {
+    background-color: $theme-tertiary;
+    border-radius: calc(1em/3);
+    color: $theme-tertiary-font;
+}
+
+.button-tertiary-neg {
+    border: 1px solid $theme-tertiary;
+    background-color: $theme-tertiary-font;
+    border-radius: calc(1em/3);
+    color: $theme-tertiary;
+}
+
+.button-quaternary {
+    background-color: $theme-quaternary;
+    border-radius: calc(1em/3);
+    color: $theme-quaternary-font;
+}
+
+.button-quaternary-neg {
+    border: 1px solid $theme-quaternary;
+    background-color: $theme-quaternary-font;
+    border-radius: calc(1em/3);
+    color: $theme-quaternary;
+}
+
+/****************************
+*** components
+****************************/
+.location {
+    margin-bottom: 5px;
+    color: $theme-font-lighter;
+    font-size: $theme-font-smaller;
+
+    img {
+        margin-bottom: 2px;
+        width: 1em;
+        height: 1em;
+        opacity: .2;
+    }
+
+}
+
+.cv-part {
+    margin: 0 0 40px 0;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.pagebreak {
+    line-height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+@media print
+{
+    .pagebreak {
+        page-break-before: always;
+    }
+
+}

@@ -1,0 +1,33 @@
+<div id="skills">
+    <h1 id="skills-header">Skills</h1>
+    <div class="d-flex flex-lg-column flex-wrap justify-content-center">
+        <div class="skill" *ngFor="let skillCategory of skillCategories">
+            <h2 class="button-secondary">{{skillCategory.name}}</h2>
+            <table>
+                <tr *ngFor="let skill of skills">
+                    <td *ngIf="skill.categoryId === skillCategory.id" class="label">{{skill.name}}</td>
+                    <td *ngIf="skill.categoryId === skillCategory.id">
+                        <form>
+                            <input type="range" class="skill-range" value="{{skill.levelBase100}}" id="{{skill.name}}" disabled>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="skill">
+            <h2 class="button-secondary">Communication</h2>
+            <table>
+                <tr>
+                    <td class="label"><img src="assets/img/fr.png" /></td>
+                    <td><span class="label">mother tongue</span></td>
+                </tr>
+                <tr>
+                    <td class="label"><img src="assets/img/en.png" /></td>
+                    <td>
+                        <span class="label">operational</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,100 @@
+@import "~src/assets/scss/variables";
+
+#skills {
+    max-width: 280px;
+}
+h1#skills-header {
+    text-align: center;
+    text-transform: uppercase;
+    color: $theme-secondary;
+}
+.skill {
+    border-radius: 7px;
+    padding: 0 0 20px 0;
+    min-width: 250px;
+    max-width: 250px;
+}
+.skill h2 {
+    padding: 10px 8px;
+    font-weight: bold;
+}
+.skill table {
+    width: 100%;
+}
+.skill table tr {
+    width: 100%
+}
+.skill table td {
+	width: 50%;
+    max-width: 50%;
+	padding: 2px 10px;
+    vertical-align: top;
+}
+.skill img {
+	width: 30px;
+}
+
+/*
+progress bars
+*/
+$range-height: 1px;
+$range-track-size: 20px;
+.skill-range {
+
+    -webkit-appearance: none;
+    height: $range-height;
+    width: 100%;
+    background: $theme-font-lighter;
+    outline: none;
+    padding: 0;
+    margin: 0;
+
+    // Range Handle
+    &::-webkit-slider-thumb {
+        appearance: none;
+        width: $range-track-size;
+        height: $range-track-size;
+        border-radius: 50%;
+        background: $theme-secondary;
+    }
+
+    &::-moz-range-thumb {
+        width: $range-track-size;
+        height: $range-track-size;
+        border: 0;
+        border-radius: 50%;
+        background: $theme-secondary;
+    }
+}
+
+/*
+* to large screen
+*/
+@media (max-width: 991.98px) {
+
+    #skills {
+        max-width: 100%;
+        margin-left:auto;
+    }
+
+    .skill {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+
+}
+
+@media print
+{
+    div {
+        float: none !important;
+    }
+
+    .skill{
+        display: inline-block;
+        float: none !important;
+        page-break-inside: avoid;
+        break-inside: avoid;
+        break-before: always;
+    }
+}

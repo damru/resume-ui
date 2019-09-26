@@ -1,0 +1,41 @@
+@import "~src/assets/scss/variables";
+
+.experience {
+
+    margin-top: 10px;
+    
+    .col-10 {
+        margin-bottom: 1em;
+
+        :last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    h2 {
+        padding-left: 15px;
+    }
+
+    .interval {
+        padding: 2px 5px;
+        margin: 0;
+        font-weight: bold;
+    }
+
+    .duration {
+        color: $theme-font-lighter;
+        font-size: .9em;
+    }
+
+    .timeline {
+        font-size: $theme-font-smaller;
+        padding-top: 2px;
+        padding-right: 0;
+
+        div {
+            text-align: center;
+        }
+
+    }
+
+}
