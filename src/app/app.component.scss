@@ -36,6 +36,7 @@
 #powered-by {
     opacity: 0.5;
     font-family: "Pacifico", cursive;
+    font-display: swap;
     text-align: center;
     margin-top: 30px;
     margin-bottom: 20px;
@@ -44,6 +45,7 @@
         font-size: 5em;
         color: $lightgrey;
         font-family: monospace;
+        font-display: swap;
     }
 }
 
