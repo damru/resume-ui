@@ -6,9 +6,9 @@ automatic_scaling:
 
 handlers:
 - url: /
-  static_files: dist/index.html
-  upload: dist/index.html
+  static_files: dist/resume/index.html
+  upload: dist/resume/index.html
 
 - url: /(.*)
-  static_files: dist/\1
-  upload: dist/(.*)
+  static_files: dist/resume/\1
+  upload: dist/resume/(.*)
