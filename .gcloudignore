@@ -15,5 +15,11 @@
 /[!.]*
 /.?*
 
-# Except compiled files
+# Except sources to build
+# NGINX config
+!/nginx/**
+# Sources
 !/dist/**
+# Docker files
+!/Dockerfile
+!/.dockerignore

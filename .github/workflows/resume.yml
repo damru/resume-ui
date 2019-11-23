@@ -4,7 +4,6 @@ on:
   push:
     branches:
     - master
-    - release/*
 
 jobs:
   npm-build:
@@ -25,7 +24,7 @@ jobs:
       with:
         name: dist
         path: dist
-  gcloud-deploy:
+  gcloud-build:
     runs-on: ubuntu-latest
     needs: npm-build
     steps:
@@ -35,11 +34,23 @@ jobs:
       uses: actions/download-artifact@v1
       with:
         name: dist
-    - name: Deploy to gcloud
+    - name: Build and deploy to GCR
       uses: actions-hub/gcloud@271.0.0
       env:
         PROJECT_ID: web-resume-254010
         APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
         CLI: gcloud
       with:
-        args: app deploy
+        args: builds submit --tag gcr.io/web-resume-254010/www
+  gcloud-deploy:
+    runs-on: ubuntu-latest
+    needs: gcloud-build
+    steps:
+    - name: Deliver service to Cloud Run
+      uses: actions-hub/gcloud@271.0.0
+      env:
+        PROJECT_ID: web-resume-254010
+        APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+        CLI: gcloud
+      with:
+        args: run deploy resume-ui --image gcr.io/web-resume-254010/www --platform managed --region=europe-west1 --allow-unauthenticated
