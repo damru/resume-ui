@@ -35,11 +35,10 @@ jobs:
       with:
         name: dist
     - name: Build and deploy to GCR
-      uses: actions-hub/gcloud@271.0.0
+      uses: actions-hub/gcloud@389.0.0
       env:
         PROJECT_ID: web-resume-254010
         APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
-        CLI: gcloud
       with:
         args: builds submit --tag gcr.io/web-resume-254010/www
   gcloud-deploy:
@@ -47,10 +46,9 @@ jobs:
     needs: gcloud-build
     steps:
     - name: Deliver service to Cloud Run
-      uses: actions-hub/gcloud@271.0.0
+      uses: actions-hub/gcloud@389.0.0
       env:
         PROJECT_ID: web-resume-254010
         APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
-        CLI: gcloud
       with:
         args: run deploy resume-ui --image gcr.io/web-resume-254010/www --platform managed --region=europe-west1 --allow-unauthenticated
