@@ -17,7 +17,7 @@ jobs:
         node-version: '12.x'
     - name: Install dependencies
       run: npm install
-    - name: Build Angular 8 Application
+    - name: Build Angular Application
       run: npm run ng build -- --prod
     - name: Upload compiled files
       uses: actions/upload-artifact@v1
