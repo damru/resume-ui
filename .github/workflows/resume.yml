@@ -18,7 +18,7 @@ jobs:
     - name: Install dependencies
       run: npm install
     - name: Build Angular Application
-      run: npm run ng build -- --prod
+      run: npm run build --prod
     - name: Upload compiled files
       uses: actions/upload-artifact@v1
       with:
