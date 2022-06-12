@@ -4,6 +4,18 @@ let i = 0;
 export const JOBS: Job[] = [
 
     {
+        id: i++, startDate: '2020-02-01', endDate: '', location: 'Nantes, France', company: 'Talend',
+        tasks: [
+            'Kickstarted a new project by creating guidelines for development, testing, build etc. in order to provide the future feature teams with strong and common basis.',
+            'Designed a microservice architectured application providing many APIs to process legal contracts and provide services on them.',
+            'Backend development with a TDD/BDD approach. Created integration testings and scenarios with business users and their requirements.',
+            'Successfully created build pipelines in order to have a continuous integration environment and flawlessly deliver in production.',
+            'Contribution to the frontend client development.'
+        ],
+        skills: ['Java', 'Spring', 'Spring Boot', 'OAuth2', 'Jenkins', 'Sonar', 'Git', 'Gradle', 'Docker', 'Kubernetes', 'Helm', 'AWS'],
+        tasks_fr: []
+    },
+    {
         id: i++, startDate: '2017-02-01', endDate: '', location: '', company: 'Société Général CIB',
         tasks: [
             'Kickstarted a new project by creating guidelines for development, testing, build etc. in order to provide the future feature teams with strong and common basis.',
