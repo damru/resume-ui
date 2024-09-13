@@ -3,7 +3,7 @@ name: Resume Pipeline
 on:
   push:
     branches:
-    - master
+    - main
 
 jobs:
   npm-build:
