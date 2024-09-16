@@ -31,11 +31,11 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
     - name: Download compiled files
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v4
       with:
         name: dist
     - name: Build and deploy to GCR
-      uses: actions-hub/gcloud@389.0.0
+      uses: actions-hub/gcloud@492.0.0
       env:
         PROJECT_ID: web-resume-254010
         APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
@@ -46,7 +46,7 @@ jobs:
     needs: gcloud-build
     steps:
     - name: Deliver service to Cloud Run
-      uses: actions-hub/gcloud@389.0.0
+      uses: actions-hub/gcloud@492.0.0
       env:
         PROJECT_ID: web-resume-254010
         APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
