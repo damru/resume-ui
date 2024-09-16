@@ -20,7 +20,10 @@
             "outputPath": "dist/resume",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": [
+              "src/polyfills.ts",
+              "@angular/localize/init"
+            ],
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
@@ -62,31 +65,38 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "resume:build"
+            "buildTarget": "resume:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "resume:build:production"
+              "buildTarget": "resume:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "resume:build"
+            "buildTarget": "resume:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": [
+              "src/polyfills.ts",
+              "@angular/localize/init"
+            ],
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "src/styles.scss"
+              "node_modules/bootstrap/scss/bootstrap.scss",
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+              "src/styles.scss"            
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"

@@ -1,12 +1,10 @@
-@import "~src/assets/scss/variables";
-
 #skills {
     max-width: 280px;
 }
 h1#skills-header {
     text-align: center;
     text-transform: uppercase;
-    color: $theme-secondary;
+    color: var(--theme-secondary);
 }
 .skill {
     border-radius: 7px;
@@ -42,9 +40,9 @@ $range-track-size: 20px;
 .skill-range {
 
     -webkit-appearance: none;
-    height: $range-height;
+    height: var(--range-height);
     width: 100%;
-    background: $theme-font-lighter;
+    background: var(--theme-font-lighter);
     outline: none;
     padding: 0;
     margin: 0;
@@ -52,18 +50,18 @@ $range-track-size: 20px;
     // Range Handle
     &::-webkit-slider-thumb {
         appearance: none;
-        width: $range-track-size;
-        height: $range-track-size;
+        width: var(--range-track-size);
+        height: var(--range-track-size);
         border-radius: 50%;
-        background: $theme-secondary;
+        background: var(--theme-secondary);
     }
 
     &::-moz-range-thumb {
-        width: $range-track-size;
-        height: $range-track-size;
+        width: var(--range-track-size);
+        height: var(--range-track-size);
         border: 0;
         border-radius: 50%;
-        background: $theme-secondary;
+        background: var(--theme-secondary);
     }
 }
 

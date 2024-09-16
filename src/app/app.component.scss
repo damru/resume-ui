@@ -1,5 +1,3 @@
-@import "~src/assets/scss/variables";
-
 /****************************
 *** header
 ****************************/
@@ -15,13 +13,13 @@
     }
 
     #position {
-        color: $theme-font-lighter;
+        color: var(--theme-font-lighter);
     }
 
     #contact {
         font-size: .9em;
         max-width: 250px;
-        color: $theme-font-lighter;
+        color: var(--theme-font-lighter);
 
         .location {
             margin: 0;
@@ -43,7 +41,7 @@
 
     .code {
         font-size: 5em;
-        color: $lightgrey;
+        color: var(--lightgrey);
         font-family: monospace;
         font-display: swap;
     }

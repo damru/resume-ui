@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { SkillsComponent } from './skills/skills.component';
@@ -16,7 +17,8 @@ import { ScholarshipComponent } from './experiences/scholarship/scholarship.comp
     ScholarshipComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgbModule, 
   ],
   providers: [],
   bootstrap: [AppComponent]

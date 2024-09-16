@@ -1,9 +1,7 @@
-@import "~src/assets/scss/variables";
-
 #education {
 
     h1 {
-        color: $theme-quaternary;
+        color: var(--theme-quaternary);
     }
 
     .school, .schoolbis {
@@ -11,14 +9,14 @@
     }
 
     .minor {
-        color: $theme-quaternary;
-        font-size: $theme-font-smaller;
+        color: var(--theme-quaternary);
+        font-size: var(--theme-font-smaller);
     }
 
     .eq-diploma {
         display: block;
         font-size: 0.75em;
-        color: $theme-font-light;
+        color: var(--theme-font-light);
     }
 
 }
