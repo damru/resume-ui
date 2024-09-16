@@ -18,7 +18,7 @@ jobs:
     - name: Install dependencies
       run: npm install
     - name: Build Angular Application
-      run: npm run build --prod
+      run: npm run build --omit=dev
     - name: Upload compiled files
       uses: actions/upload-artifact@v4
       with:
@@ -34,6 +34,7 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: dist
+        path: dist
     - name: Build and deploy to GCR
       uses: actions-hub/gcloud@492.0.0
       env:
