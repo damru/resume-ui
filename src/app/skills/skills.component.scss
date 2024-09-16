@@ -1,4 +1,6 @@
 #skills {
+    --range-height: 1px;
+    --range-track-size: 20px;
     max-width: 280px;
 }
 h1#skills-header {
@@ -19,14 +21,14 @@ h1#skills-header {
 .skill table {
     width: 100%;
 }
-.skill table tr {
-    width: 100%
+.skill table > div {
+    padding: 0 10px
 }
-.skill table td {
+
+.skill div label {
 	width: 50%;
     max-width: 50%;
-	padding: 2px 10px;
-    vertical-align: top;
+    padding-bottom: 2px;
 }
 .skill img {
 	width: 30px;
@@ -35,39 +37,32 @@ h1#skills-header {
 /*
 progress bars
 */
-:root {
-    --range-height: 1px;
-    --range-track-size: 20px;
-}
-
 .skill-range {
-
     -webkit-appearance: none;
+    appearance: none;
     height: var(--range-height);
-    width: 100%;
+    width: 50%;
     background: var(--theme-font-lighter);
     outline: none;
-    padding: 0;
-    margin: 0;
-
-    // Range Handle
-    &::-webkit-slider-thumb {
-        appearance: none;
-        width: var(--range-track-size);
-        height: var(--range-track-size);
-        border-radius: 50%;
-        background: var(--theme-secondary);
-    }
-
-    &::-moz-range-thumb {
-        width: var(--range-track-size);
-        height: var(--range-track-size);
-        border: 0;
-        border-radius: 50%;
-        background: var(--theme-secondary);
-    }
+    vertical-align: middle;
 }
-
+// thumb
+.skill-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: var(--range-track-size);
+    height: var(--range-track-size);
+    background-color: var(--theme-secondary);
+    border-radius: 50%;
+}
+.skill-range::-moz-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: var(--range-track-size);
+    height: var(--range-track-size);
+    background-color: var(--theme-secondary);
+    border-radius: 50%;
+}
 /*
 * to large screen
 */
