@@ -35,8 +35,11 @@ h1#skills-header {
 /*
 progress bars
 */
-$range-height: 1px;
-$range-track-size: 20px;
+:root {
+    --range-height: 1px;
+    --range-track-size: 20px;
+}
+
 .skill-range {
 
     -webkit-appearance: none;
