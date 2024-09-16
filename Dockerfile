@@ -1,4 +1,4 @@
-FROM nginx:alpine
+FROM nginx:alpine-slim
 COPY nginx /etc/nginx
 RUN rm -rf /usr/share/nginx/html/*
 COPY dist/resume /usr/share/nginx/html
