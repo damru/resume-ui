@@ -31,21 +31,21 @@
     /*****************
     * THEMING
     ******************/
-    --theme-font: --darkgrey;
-    --theme-font-light: --grey;
-    --theme-font-lighter: --lightgrey;
+    --theme-font: var(--darkgrey);
+    --theme-font-light: var(--grey);
+    --theme-font-lighter: var(--lightgrey);
     
-    --theme-primary: --darkgrey;
-    --theme-primary-font: --white;
+    --theme-primary: var(--darkgrey);
+    --theme-primary-font: var(--white);
     
-    --theme-secondary: --redish;
-    --theme-secondary-font: --white;
+    --theme-secondary: var(--redish);
+    --theme-secondary-font: var(--white);
     
-    --theme-tertiary: --emerald;
-    --theme-tertiary-font: --white;
+    --theme-tertiary: var(--emerald);
+    --theme-tertiary-font: var(--white);
     
-    --theme-quaternary: --blue;
-    --theme-quaternary-font: --white;
+    --theme-quaternary: var(--blue);
+    --theme-quaternary-font: var(--white);
     
     --theme-font-smaller: .9em;
 }
