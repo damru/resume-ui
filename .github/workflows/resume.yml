@@ -22,8 +22,8 @@ jobs:
     - name: Upload compiled files
       uses: actions/upload-artifact@v4
       with:
-        name: dist
-        path: dist
+        name: app
+        path: ${{ github.workspace }}/dist
   gcloud-build:
     runs-on: ubuntu-latest
     needs: npm-build
@@ -33,8 +33,8 @@ jobs:
     - name: Download compiled files
       uses: actions/download-artifact@v4
       with:
-        name: dist
-        path: dist
+        name: app
+        path: ${{ github.workspace }}/dist
     - name: Build and deploy to GCR
       uses: actions-hub/gcloud@492.0.0
       env:
