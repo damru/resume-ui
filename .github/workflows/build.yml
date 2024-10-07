@@ -14,9 +14,6 @@ concurrency:
   group: "${{ github.workflow }}-${{ github.ref }}"
   cancel-in-progress: true
 
-env:
-  DOCKERHUB_PROJECT: web-resume
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -45,7 +42,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            ${{ env.DOCKER_USERNAME }}/${{ env.DOCKERHUB_PROJECT }}
+            ${{ vars.DOCKERHUB_USERNAME }}/${{ vars.DOCKERHUB_PROJECT }}
           tags: |
             type=schedule
             type=ref,event=branch
