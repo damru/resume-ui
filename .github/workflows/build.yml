@@ -1,4 +1,4 @@
-name: Resume Pipeline
+name: Build and deliver
 
 on:
   schedule:
