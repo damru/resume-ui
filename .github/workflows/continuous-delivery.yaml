@@ -1,0 +1,21 @@
+name: Continuous delivery from main branch
+
+on:
+  push:
+    branches:
+      - "main"
+
+concurrency:
+  group: "${{ github.workflow }}-${{ github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          npm version from-git --no-git-tag-version || true
+          git tag $(npm version minor --no-git-tag-version)"
+          git push origin --tags
