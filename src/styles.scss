@@ -4,183 +4,174 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 @import url('https://fonts.googleapis.com/css?family=Lato');
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
 
 /****************************
 *** variables
 ****************************/
 :root {
-    --emerald: #50c878;
-    --emerald-lighter: #d6f2e0;
-    
-    --redish: #ff5252;
-    
-    --blue: #5796d6;
-    
-    --lightgrey: #bbbfbb;
-    --grey: #707f70;
-    --darkgrey: #222222;
-    
-    --blue: #325886;
-    
-    --lightgreen: #b6ceb1;
-    --green: #90B289;
-    --darkgreen: #688162;
-    
-    --white: #ffffff;
-    
-    /*****************
-    * THEMING
-    ******************/
-    --theme-font: var(--darkgrey);
-    --theme-font-light: var(--grey);
-    --theme-font-lighter: var(--lightgrey);
-    
-    --theme-primary: var(--darkgrey);
-    --theme-primary-font: var(--white);
-    
-    --theme-secondary: var(--redish);
-    --theme-secondary-font: var(--white);
-    
-    --theme-tertiary: var(--emerald);
-    --theme-tertiary-font: var(--white);
-    
-    --theme-quaternary: var(--blue);
-    --theme-quaternary-font: var(--white);
-    
-    --theme-font-smaller: .9em;
+  --blue: #325886;
+  --darkgrey: #222222;
+  --darkgreen: #688162;
+  --emerald: #50c878;
+  --emerald-lighter: #d6f2e0;
+  --green: #90B289;
+  --grey: #707f70;
+  --lightgreen: #b6ceb1;
+  --lightgrey: #bbbfbb;
+  --redish: #ff5252;
+  --white: #ffffff;
+
+  /*****************
+  * THEMING
+  ******************/
+  --theme-font-color: var(--darkgrey);
+  --theme-font-color-light: var(--grey);
+  --theme-font-color-lighter: var(--lightgrey);
+  --theme-primary-color: var(--darkgrey);
+  --theme-primary-font-color: var(--white);
+  --theme-secondary-color: var(--redish);
+  --theme-secondary-font-color: var(--white);
+  --theme-tertiary-color: var(--emerald);
+  --theme-tertiary-font-color: var(--white);
+  --theme-quaternary-color: var(--blue);
+  --theme-quaternary-font-color: var(--white);
+  --theme-font-size: 14px;
+  --theme-font-size-smaller: .9rem;
 }
 
 /****************************
 *** colors
 ****************************/
 .heart {
-    color: red;
+  color: red;
 }
 
 /****************************
 *** basics
 ****************************/
 body {
-    -webkit-touch-callout: none;
-    -webkit-text-size-adjust: 100%;
-    -webkit-font-smoothing: antialiased;
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
 
-    min-width: 440px;
-    font-size: 14px;
-    color: var(--theme-font);
+  min-width: 440px;
+  font-size: var(--theme-font-size);
+  color: var(--theme-font-color);
 }
+
 h1, h2 {
-	padding: 10px 0;
-    font-size: 1.5em;
+  padding: 10px 0;
+  font-size: 1.3em;
 }
+
 h1 {
-    font-size: 1.8em;
-    color: var(--theme-font);
-    text-transform: uppercase;
+  font-size: 1.8em;
+  color: var(--theme-font-color);
+  text-transform: uppercase;
 }
+
 h2 {
-    font-size: 1.3em;
-    color: var(--theme-font);
+  font-size: 1.3em;
+  color: var(--theme-font-color);
 }
 
 a {
-    color: var(--theme-font-light);
+  color: var(--theme-font-color-light);
 
-    &:hover {
-        color: var(--theme-font);
-    }
+  &:hover {
+    color: var(--theme-font-color);
+  }
 }
 
 /****************************
 *** theme components
 ****************************/
 .button-primary {
-    background-color: var(--theme-primary);
-    border-radius: calc(1em/3);
-    color: var(--theme-primary-font);
+  background-color: var(--theme-primary-color);
+  border-radius: calc(1em / 3);
+  color: var(--theme-primary-font-color);
 }
 
 .button-primary-neg {
-    border: 1px solid var(--theme-primary);
-    background-color: var(--theme-primary-font);
-    border-radius: calc(1em/3);
-    color: var(--theme-primary);
+  border: 1px solid var(--theme-primary-color);
+  background-color: var(--theme-primary-font-color);
+  border-radius: calc(1em / 3);
+  color: var(--theme-primary-color);
 }
 
 .button-secondary {
-    background-color: var(--theme-secondary);
-    border-radius: calc(1em/3);
-    color: var(--theme-secondary-font);
+  background-color: var(--theme-secondary-color);
+  border-radius: calc(1em / 3);
+  color: var(--theme-secondary-font-color);
 }
 
 .button-secondary-neg {
-    border: 1px solid var(--theme-secondary);
-    background-color: var(--theme-secondary-font);
-    border-radius: calc(1em/3);
-    color: var(--theme-secondary);
+  border: 1px solid var(--theme-secondary-color);
+  background-color: var(--theme-secondary-font-color);
+  border-radius: calc(1em / 3);
+  color: var(--theme-secondary-color);
 }
 
 .button-tertiary {
-    background-color: var(--theme-tertiary);
-    border-radius: calc(1em/3);
-    color: var(--theme-tertiary-font);
+  background-color: var(--theme-tertiary-color);
+  border-radius: calc(1em / 3);
+  color: var(--theme-tertiary-font-color);
 }
 
 .button-tertiary-neg {
-    border: 1px solid var(--theme-tertiary);
-    background-color: var(--theme-tertiary-font);
-    border-radius: calc(1em/3);
-    color: var(--theme-tertiary);
+  border: 1px solid var(--theme-tertiary-color);
+  background-color: var(--theme-tertiary-font-color);
+  border-radius: calc(1em / 3);
+  color: var(--theme-tertiary-color);
 }
 
 .button-quaternary {
-    background-color: var(--theme-quaternary);
-    border-radius: calc(1em/3);
-    color: var(--theme-quaternary-font);
+  background-color: var(--theme-quaternary-color);
+  border-radius: calc(1em / 3);
+  color: var(--theme-quaternary-font-color);
 }
 
 .button-quaternary-neg {
-    border: 1px solid var(--theme-quaternary);
-    background-color: var(--theme-quaternary-font);
-    border-radius: calc(1em/3);
-    color: var(--theme-quaternary);
+  border: 1px solid var(--theme-quaternary-color);
+  background-color: var(--theme-quaternary-font-color);
+  border-radius: calc(1em / 3);
+  color: var(--theme-quaternary-color);
 }
 
 /****************************
 *** components
 ****************************/
 .location {
-    margin-bottom: 5px;
-    color: var(--theme-font-lighter);
-    font-size: var(--theme-font-smaller);
+  margin-bottom: 5px;
+  color: var(--theme-font-color-lighter);
+  font-size: var(--theme-font-size-smaller);
 
-    img {
-        margin-bottom: 2px;
-        width: 1em;
-        height: 1em;
-        opacity: .2;
-    }
+  img {
+    margin-bottom: 2px;
+    width: 1em;
+    height: 1em;
+    opacity: .2;
+  }
 
 }
 
 .cv-part {
-    margin: 0 0 40px 0;
-    padding-right: 15px;
-    padding-left: 15px;
+  margin: 0 0 40px 0;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .pagebreak {
-    line-height: 0;
-    padding: 0;
-    margin: 0;
+  line-height: 0;
+  padding: 0;
+  margin: 0;
 }
 
-@media print
-{
-    .pagebreak {
-        page-break-before: always;
-    }
+@media print {
+  .pagebreak {
+    page-break-before: always;
+  }
 
 }
-/* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';

@@ -1,96 +1,104 @@
 #skills {
-    --range-height: 1px;
-    --range-track-size: 20px;
-    max-width: 280px;
+  --range-height: 1px;
+  --range-track-size: 20px;
+  max-width: 280px;
 }
+
 h1#skills-header {
-    text-align: center;
-    text-transform: uppercase;
-    color: var(--theme-secondary);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--theme-secondary-color);
 }
+
 .skill {
-    border-radius: 7px;
-    padding: 0 0 20px 0;
-    min-width: 250px;
-    max-width: 250px;
+  border-radius: 7px;
+  padding: 0 0 20px 0;
+  min-width: 250px;
+  max-width: 250px;
 }
+
 .skill h2 {
-    padding: 10px 8px;
-    font-weight: bold;
+  padding: 10px 8px;
+  font-weight: bold;
 }
+
 .skill table {
-    width: 100%;
+  width: 100%;
 }
+
 .skill table > div {
-    padding: 0 10px
+  padding: 0 10px
 }
 
 .skill div label {
-	width: 50%;
-    max-width: 50%;
-    padding-bottom: 2px;
+  width: 50%;
+  max-width: 50%;
+  padding-bottom: 2px;
 }
+
 .skill img {
-	width: 30px;
+  width: 30px;
 }
 
 /*
 progress bars
 */
 .skill-range {
-    -webkit-appearance: none;
-    appearance: none;
-    height: var(--range-height);
-    width: 50%;
-    background: var(--theme-font-lighter);
-    outline: none;
-    vertical-align: middle;
+  -webkit-appearance: none;
+  appearance: none;
+  height: var(--range-height);
+  width: 50%;
+  background: var(--theme-font-color-lighter);
+  outline: none;
+  vertical-align: middle;
 }
+
 // thumb
 .skill-range::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: var(--range-track-size);
-    height: var(--range-track-size);
-    background-color: var(--theme-secondary);
-    border-radius: 50%;
+  -webkit-appearance: none;
+  appearance: none;
+  width: var(--range-track-size);
+  height: var(--range-track-size);
+  background-color: var(--theme-secondary-color);
+  border-radius: 50%;
 }
+
 .skill-range::-moz-range-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: var(--range-track-size);
-    height: var(--range-track-size);
-    background-color: var(--theme-secondary);
-    border-radius: 50%;
+  -webkit-appearance: none;
+  appearance: none;
+  width: var(--range-track-size);
+  height: var(--range-track-size);
+  background-color: var(--theme-secondary-color);
+  border-radius: 50%;
 }
+
 /*
 * to large screen
 */
 @media (max-width: 991.98px) {
 
-    #skills {
-        max-width: 100%;
-        margin-left:auto;
-    }
+  #skills {
+    max-width: 100%;
+    margin-left: auto;
+  }
 
-    .skill {
-        margin-right: 15px;
-        margin-left: 15px;
-    }
+  .skill {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
 
 }
 
-@media print
-{
-    div {
-        float: none !important;
-    }
+@media print {
+  div {
+    float: none !important;
+  }
 
-    .skill{
-        display: inline-block;
-        float: none !important;
-        page-break-inside: avoid;
-        break-inside: avoid;
-        break-before: always;
-    }
+  .skill {
+    display: inline-block;
+    float: none !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    break-before: always;
+  }
 }

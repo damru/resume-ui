@@ -2,49 +2,49 @@
 *** header
 ****************************/
 #personal-details {
-    margin: 0 auto;
-    padding: 30px 0;
+  margin: 0 auto;
+  padding: 30px 0;
 
-    #name, #position {
-        font-size: 3em;
-        text-align: justify;
-        text-transform: uppercase;
-        line-height: .75em;
+  #name, #position {
+    font-size: 3em;
+    text-align: justify;
+    text-transform: uppercase;
+    line-height: .75em;
+  }
+
+  #position {
+    color: var(--theme-font-color-lighter);
+  }
+
+  #contact {
+    font-size: .9em;
+    max-width: 250px;
+    color: var(--theme-font-color-lighter);
+
+    .location {
+      margin: 0;
+      font-size: 1em;
     }
-
-    #position {
-        color: var(--theme-font-lighter);
-    }
-
-    #contact {
-        font-size: .9em;
-        max-width: 250px;
-        color: var(--theme-font-lighter);
-
-        .location {
-            margin: 0;
-            font-size: 1em;
-        }
-    }
+  }
 }
 
 /****************************
 *** footer
 ****************************/
 #powered-by {
-    opacity: 0.5;
-    font-family: "Pacifico", cursive;
-    font-display: swap;
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 20px;
+  opacity: 0.5;
+  font-family: "Pacifico", cursive;
+  font-display: swap;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
 
-    .code {
-        font-size: 5em;
-        color: var(--lightgrey);
-        font-family: monospace;
-        font-display: swap;
-    }
+  .code {
+    font-size: 5em;
+    color: var(--lightgrey);
+    font-family: monospace;
+    font-display: swap;
+  }
 }
 
 
@@ -54,21 +54,22 @@
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
 
-    #contact {
-        max-width: 100% !important;
-        margin-top: 10px;
+  #contact {
+    max-width: 100% !important;
+    margin-top: 10px;
 
-        span {
-            display: inline-block;
+    span {
+      display: inline-block;
 
-            &::before {
-                content: "|";
-                margin: 0 7px;
-            }
-            &:first-child::before {
-                content: "";
-            }
+      &::before {
+        content: "|";
+        margin: 0 7px;
+      }
 
-        }
+      &:first-child::before {
+        content: "";
+      }
+
     }
+  }
 }

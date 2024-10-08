@@ -1,58 +1,47 @@
 #work-experiences {
 
-    h1 {
-        color: var(--theme-tertiary);
+  h1 {
+    color: var(--theme-tertiary-color);
+  }
+
+  .company {
+    font-weight: bold;
+  }
+
+  ul.tasks {
+    margin: 0 0 10px 0;
+    padding: 0;
+    text-align: justify;
+
+    li::marker {
+      color: var(--theme-tertiary-color);
+    }
+  }
+
+  ul.job-skills {
+    display: inline-block;
+    padding: 0;
+    margin: 0 20px;
+    font-size: var(--theme-font-size-smaller);
+
+    li {
+      display: inline-block;
+      padding: 5px;
+      margin: 3px;
     }
 
-    .company {
-        font-weight: bold;
+    li::before {
+      content: none;
     }
-
-    ul.tasks {
-        margin: 0 0 10px 0;
-        padding: 0;
-        list-style: none;
-        text-align: justify;
-
-        li:before {
-            content: "";
-            height: 0;
-            width: 0;
-            border-color: var(--theme-tertiary);
-            border-style: solid;
-            border-width: 0.3em;
-            transform: rotate(45deg);
-            position: relative;
-            display: inline-block;
-            margin-right: 5px;
-        }
-    }
-
-    ul.job-skills {
-        display: inline-block;
-        padding: 0;
-        margin: 0 20px;
-        font-size: var(--theme-font-smaller);
-
-        li {
-            display: inline-block;
-            padding: 5px;
-            margin: 3px;
-        }
-
-        li::before {
-            content: none;
-        }
-    }
+  }
 }
 
-@media print
-{
+@media print {
 
-    div.col-10{
-        display: inline-block;
-        position: relative;
-        page-break-inside: avoid;
-        break-inside: avoid;
-    }
+  div.col-10 {
+    display: inline-block;
+    position: relative;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
 }
