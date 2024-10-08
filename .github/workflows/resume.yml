@@ -1,41 +1,41 @@
 name: Resume Pipeline
 
 on:
-  push:
-    branches:
-    - main
+  workflow_dispatch:
+
 
 jobs:
   npm-build:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v1
+      uses: actions/checkout@v4
     - name: Setup node
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v4
       with:
-        node-version: '16.x'
+        node-version: '22.x'
     - name: Install dependencies
       run: npm install
     - name: Build Angular Application
-      run: npm run build --prod
+      run: npm run build --omit=dev
     - name: Upload compiled files
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v4
       with:
-        name: dist
-        path: dist
+        name: app
+        path: ${{ github.workspace }}/dist
   gcloud-build:
     runs-on: ubuntu-latest
     needs: npm-build
     steps:
     - name: Checkout
-      uses: actions/checkout@v1
+      uses: actions/checkout@v4
     - name: Download compiled files
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v4
       with:
-        name: dist
+        name: app
+        path: ${{ github.workspace }}/dist
     - name: Build and deploy to GCR
-      uses: actions-hub/gcloud@389.0.0
+      uses: actions-hub/gcloud@492.0.0
       env:
         PROJECT_ID: web-resume-254010
         APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
@@ -46,7 +46,7 @@ jobs:
     needs: gcloud-build
     steps:
     - name: Deliver service to Cloud Run
-      uses: actions-hub/gcloud@389.0.0
+      uses: actions-hub/gcloud@492.0.0
       env:
         PROJECT_ID: web-resume-254010
         APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}

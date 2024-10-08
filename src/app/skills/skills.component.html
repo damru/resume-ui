@@ -4,14 +4,10 @@
         <div class="skill" *ngFor="let skillCategory of skillCategories">
             <h2 class="button-secondary">{{skillCategory.name}}</h2>
             <table>
-                <tr *ngFor="let skill of skills">
-                    <td *ngIf="skill.categoryId === skillCategory.id" class="label">{{skill.name}}</td>
-                    <td *ngIf="skill.categoryId === skillCategory.id">
-                        <form>
-                            <input type="range" class="skill-range" value="{{skill.levelBase100}}" id="{{skill.name}}" disabled>
-                        </form>
-                    </td>
-                </tr>
+                <div *ngFor="let skill of skills">
+                    <label *ngIf="skill.categoryId === skillCategory.id" class="label" for="{{skill.name}}">{{skill.name}}</label>
+                    <input *ngIf="skill.categoryId === skillCategory.id" type="range" class="skill-range" value="{{skill.levelBase100}}" id="{{skill.name}}" name="{{skill.name}}" disabled>
+                </div>
             </table>
         </div>
         <div class="skill">

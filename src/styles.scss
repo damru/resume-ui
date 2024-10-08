@@ -1,14 +1,54 @@
 /****************************
-*** bootstrap
-****************************/
-@import "~src/assets/scss/main.scss";
-
-/****************************
 *** fonts
 ****************************/
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 @import url('https://fonts.googleapis.com/css?family=Lato');
+
+/****************************
+*** variables
+****************************/
+:root {
+    --emerald: #50c878;
+    --emerald-lighter: #d6f2e0;
+    
+    --redish: #ff5252;
+    
+    --blue: #5796d6;
+    
+    --lightgrey: #bbbfbb;
+    --grey: #707f70;
+    --darkgrey: #222222;
+    
+    --blue: #325886;
+    
+    --lightgreen: #b6ceb1;
+    --green: #90B289;
+    --darkgreen: #688162;
+    
+    --white: #ffffff;
+    
+    /*****************
+    * THEMING
+    ******************/
+    --theme-font: var(--darkgrey);
+    --theme-font-light: var(--grey);
+    --theme-font-lighter: var(--lightgrey);
+    
+    --theme-primary: var(--darkgrey);
+    --theme-primary-font: var(--white);
+    
+    --theme-secondary: var(--redish);
+    --theme-secondary-font: var(--white);
+    
+    --theme-tertiary: var(--emerald);
+    --theme-tertiary-font: var(--white);
+    
+    --theme-quaternary: var(--blue);
+    --theme-quaternary-font: var(--white);
+    
+    --theme-font-smaller: .9em;
+}
 
 /****************************
 *** colors
@@ -27,7 +67,7 @@ body {
 
     min-width: 440px;
     font-size: 14px;
-    color: $theme-font;
+    color: var(--theme-font);
 }
 h1, h2 {
 	padding: 10px 0;
@@ -35,19 +75,19 @@ h1, h2 {
 }
 h1 {
     font-size: 1.8em;
-    color: $theme-font;
+    color: var(--theme-font);
     text-transform: uppercase;
 }
 h2 {
     font-size: 1.3em;
-    color: $theme-font;
+    color: var(--theme-font);
 }
 
 a {
-    color: $theme-font-light;
+    color: var(--theme-font-light);
 
     &:hover {
-        color: $theme-font;
+        color: var(--theme-font);
     }
 }
 
@@ -55,55 +95,55 @@ a {
 *** theme components
 ****************************/
 .button-primary {
-    background-color: $theme-primary;
+    background-color: var(--theme-primary);
     border-radius: calc(1em/3);
-    color: $theme-primary-font;
+    color: var(--theme-primary-font);
 }
 
 .button-primary-neg {
-    border: 1px solid $theme-primary;
-    background-color: $theme-primary-font;
+    border: 1px solid var(--theme-primary);
+    background-color: var(--theme-primary-font);
     border-radius: calc(1em/3);
-    color: $theme-primary;
+    color: var(--theme-primary);
 }
 
 .button-secondary {
-    background-color: $theme-secondary;
+    background-color: var(--theme-secondary);
     border-radius: calc(1em/3);
-    color: $theme-secondary-font;
+    color: var(--theme-secondary-font);
 }
 
 .button-secondary-neg {
-    border: 1px solid $theme-secondary;
-    background-color: $theme-secondary-font;
+    border: 1px solid var(--theme-secondary);
+    background-color: var(--theme-secondary-font);
     border-radius: calc(1em/3);
-    color: $theme-secondary;
+    color: var(--theme-secondary);
 }
 
 .button-tertiary {
-    background-color: $theme-tertiary;
+    background-color: var(--theme-tertiary);
     border-radius: calc(1em/3);
-    color: $theme-tertiary-font;
+    color: var(--theme-tertiary-font);
 }
 
 .button-tertiary-neg {
-    border: 1px solid $theme-tertiary;
-    background-color: $theme-tertiary-font;
+    border: 1px solid var(--theme-tertiary);
+    background-color: var(--theme-tertiary-font);
     border-radius: calc(1em/3);
-    color: $theme-tertiary;
+    color: var(--theme-tertiary);
 }
 
 .button-quaternary {
-    background-color: $theme-quaternary;
+    background-color: var(--theme-quaternary);
     border-radius: calc(1em/3);
-    color: $theme-quaternary-font;
+    color: var(--theme-quaternary-font);
 }
 
 .button-quaternary-neg {
-    border: 1px solid $theme-quaternary;
-    background-color: $theme-quaternary-font;
+    border: 1px solid var(--theme-quaternary);
+    background-color: var(--theme-quaternary-font);
     border-radius: calc(1em/3);
-    color: $theme-quaternary;
+    color: var(--theme-quaternary);
 }
 
 /****************************
@@ -111,8 +151,8 @@ a {
 ****************************/
 .location {
     margin-bottom: 5px;
-    color: $theme-font-lighter;
-    font-size: $theme-font-smaller;
+    color: var(--theme-font-lighter);
+    font-size: var(--theme-font-smaller);
 
     img {
         margin-bottom: 2px;
@@ -142,3 +182,5 @@ a {
     }
 
 }
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
