@@ -14,4 +14,4 @@ This resume is crafted with :heart:
 
 :rocket: powered by [Docker](https://www.docker.com/) and [NGINX](https://www.nginx.com/),
 
-:cloud: and hosted on [Google Cloud](https://cloud.google.com/).
+:cloud: and hosted on a bare metal [k8s](https://kubernetes.io/) cluster running on [Talos](https://www.talos.dev/) through [proxmox](https://www.proxmox.com/).
