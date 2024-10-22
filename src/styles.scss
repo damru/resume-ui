@@ -1,9 +1,9 @@
 /****************************
 *** fonts
 ****************************/
-@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Alata');
+@import url('https://fonts.googleapis.com/css?family=Arima');
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
-@import url('https://fonts.googleapis.com/css?family=Lato');
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
 
@@ -38,7 +38,7 @@
   --theme-quaternary-color: var(--blue);
   --theme-quaternary-font-color: var(--white);
   --theme-font-size: 14px;
-  --theme-font-size-smaller: .9rem;
+  --theme-font-size-smaller: .9em;
 }
 
 /****************************
