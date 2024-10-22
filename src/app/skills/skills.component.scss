@@ -1,7 +1,13 @@
 #skills {
   --range-height: 1px;
   --range-track-size: 20px;
-  max-width: 280px;
+  width: 320px;
+  margin: 0 0 40px;
+  padding: 0 15px;
+
+  .d-flex {
+    gap: 20px;
+  }
 }
 
 h1#skills-header {
@@ -11,10 +17,7 @@ h1#skills-header {
 }
 
 .skill {
-  border-radius: 7px;
-  padding: 0 0 20px 0;
-  min-width: 250px;
-  max-width: 250px;
+  flex: 1 1 100%;
 }
 
 .skill h2 {
@@ -78,13 +81,15 @@ progress bars
 @media (max-width: 991.98px) {
 
   #skills {
-    max-width: 100%;
-    margin-left: auto;
+    width: 100%;
+
+    .d-flex {
+      gap: 10px;
+    }
   }
 
   .skill {
-    margin-right: 15px;
-    margin-left: 15px;
+    flex: 1 1 calc(50% - 20px);
   }
 
 }
