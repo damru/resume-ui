@@ -74,11 +74,7 @@ progress bars
   border-radius: 50%;
 }
 
-/*
-* to large screen
-*/
-@media (max-width: 991.98px) {
-
+@media (max-width: 992px) {
   #skills .d-flex {
     gap: 10px;
   }
@@ -86,7 +82,6 @@ progress bars
   .skill {
     flex: 1 1 calc(50% - 20px);
   }
-
 }
 
 @media print {

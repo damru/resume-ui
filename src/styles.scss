@@ -1,15 +1,15 @@
-/****************************
+/*****************
 *** fonts
-****************************/
+*****************/
 @import url('https://fonts.googleapis.com/css?family=Alata');
 @import url('https://fonts.googleapis.com/css?family=Arima');
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
 
-/****************************
-*** variables
-****************************/
+/*****************
+* VARIABLES
+*****************/
 :root {
   --blue: #325886;
   --darkgrey: #222222;
@@ -29,6 +29,9 @@
   --theme-font-color: var(--darkgrey);
   --theme-font-color-light: var(--grey);
   --theme-font-color-lighter: var(--lightgrey);
+  --theme-font-family: "Alata";
+  --theme-font-size: 14px;
+  --theme-font-size-smaller: .9em;
   --theme-primary-color: var(--darkgrey);
   --theme-primary-font-color: var(--white);
   --theme-secondary-color: var(--redish);
@@ -37,32 +40,25 @@
   --theme-tertiary-font-color: var(--white);
   --theme-quaternary-color: var(--blue);
   --theme-quaternary-font-color: var(--white);
-  --theme-font-size: 14px;
-  --theme-font-size-smaller: .9em;
+
+  /*****************
+  * BOOTSTRAP OVERRIDE
+  ******************/
+  --bs-body-font-family: var(--theme-font-family);
+  --bs-body-font-size: var(--theme-font-size);
 }
 
-/****************************
-*** colors
-****************************/
-.heart {
-  color: red;
-}
-
-/****************************
-*** basics
-****************************/
+/*****************
+* BASICS
+*****************/
 body {
   -webkit-touch-callout: none;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
-
-  font-size: var(--theme-font-size);
-  color: var(--theme-font-color);
 }
 
 h1, h2 {
   padding: 10px 0;
-  font-size: 1.3em;
 }
 
 h1 {
@@ -84,9 +80,19 @@ a {
   }
 }
 
-/****************************
-*** theme components
-****************************/
+@media print {
+  .pagebreak {
+    page-break-before: always;
+  }
+}
+
+/*****************
+* GLOBAL
+*****************/
+.heart {
+  color: red;
+}
+
 .button-primary {
   background-color: var(--theme-primary-color);
   border-radius: calc(1em / 3);
@@ -139,21 +145,19 @@ a {
   color: var(--theme-quaternary-color);
 }
 
-/****************************
-*** components
-****************************/
 .location {
-  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 5px 0;
   color: var(--theme-font-color-lighter);
   font-size: var(--theme-font-size-smaller);
+}
 
-  img {
-    margin-bottom: 2px;
-    width: 1em;
-    height: 1em;
-    opacity: .2;
-  }
-
+img.pinpoint {
+  width: 1em;
+  height: 1em;
+  opacity: .2;
 }
 
 .cv-part {
@@ -166,11 +170,4 @@ a {
   line-height: 0;
   padding: 0;
   margin: 0;
-}
-
-@media print {
-  .pagebreak {
-    page-break-before: always;
-  }
-
 }

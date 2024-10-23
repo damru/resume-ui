@@ -1,6 +1,3 @@
-/****************************
-*** header
-****************************/
 #personal-details {
   font-family: "Alata";
   margin: 30px auto;
@@ -19,7 +16,7 @@
   }
 
   #position {
-    color: var(--theme-font-color-lighter);
+    color: var(--theme-font-color-light);
     font-size: 2em;
     font-weight: lighter;
     padding-left: .5em;
@@ -28,18 +25,15 @@
   #contact {
     font-size: .9em;
     max-width: 250px;
-    color: var(--theme-font-color-lighter);
+    color: var(--theme-font-color-light);
 
-    .location {
-      margin: 0;
-      font-size: 1em;
+    img.pinpoint {
+      opacity: .5;
+      margin-right: 5px;
     }
   }
 }
 
-/****************************
-*** footer
-****************************/
 #powered-by {
   opacity: 0.5;
   font-family: "Pacifico", cursive;
@@ -57,12 +51,7 @@
   }
 }
 
-
-/****************************
-*** medias
-****************************/
-// Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) {
+@media (max-width: 576px) {
 
   #contact {
     max-width: 100% !important;
@@ -79,7 +68,6 @@
       &:first-child::before {
         content: "";
       }
-
     }
   }
 }
