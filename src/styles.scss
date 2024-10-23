@@ -3,6 +3,7 @@
 *****************/
 @import url('https://fonts.googleapis.com/css?family=Alata');
 @import url('https://fonts.googleapis.com/css?family=Arima');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
@@ -29,9 +30,9 @@
   --theme-font-color: var(--darkgrey);
   --theme-font-color-light: var(--grey);
   --theme-font-color-lighter: var(--lightgrey);
-  --theme-font-family: "Alata";
-  --theme-font-size: 14px;
-  --theme-font-size-smaller: .9em;
+  --theme-font-family: "Open Sans";
+  --theme-font-size-medium: .875rem;
+  --theme-font-size-smaller: .7rem;
   --theme-primary-color: var(--darkgrey);
   --theme-primary-font-color: var(--white);
   --theme-secondary-color: var(--redish);
@@ -45,7 +46,7 @@
   * BOOTSTRAP OVERRIDE
   ******************/
   --bs-body-font-family: var(--theme-font-family);
-  --bs-body-font-size: var(--theme-font-size);
+  --bs-body-font-size: var(--theme-font-size-medium);
 }
 
 /*****************
@@ -59,6 +60,7 @@ body {
 
 h1, h2 {
   padding: 10px 0;
+  font-family: "Alata";
 }
 
 h1 {
