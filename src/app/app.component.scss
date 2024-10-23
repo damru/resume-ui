@@ -45,8 +45,9 @@
   font-family: "Pacifico", cursive;
   font-display: swap;
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 20px;
+  margin: 30px auto;
+  padding: 30px 0 0 0;
+  border-top: 5px dotted var(--theme-font-color-lighter);
 
   .code {
     font-size: 5em;
