@@ -1,15 +1,11 @@
 #education {
 
-  h1 {
-    color: var(--theme-quaternary-color);
-  }
-
   .school, .schoolbis {
     font-weight: bold;
   }
 
   .minor {
-    color: var(--theme-quaternary-color);
+    color: var(--theme-background-color);
     font-size: var(--theme-font-size-smaller);
   }
 

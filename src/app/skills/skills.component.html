@@ -1,27 +1,27 @@
-<div id="skills">
-  <h1 id="skills-header">Skills</h1>
+<div id="skills" class="secondary">
+  <h1 class="negative">Skills</h1>
   <div class="d-flex flex-lg-column flex-wrap justify-content-center">
     <div class="skill" *ngFor="let skillCategory of skillCategories">
-      <h2 class="button-secondary">{{ skillCategory.name }}</h2>
+      <h2 class="button">{{ skillCategory.name }}</h2>
       <table>
         <div *ngFor="let skill of skills">
-          <label *ngIf="skill.categoryId === skillCategory.id" class="label" for="{{skill.name}}">{{ skill.name }}</label>
+          <label *ngIf="skill.categoryId === skillCategory.id" for="{{skill.name}}">{{ skill.name }}</label>
           <input *ngIf="skill.categoryId === skillCategory.id" type="range" class="skill-range" value="{{skill.levelBase100}}"
                  id="{{skill.name}}" name="{{skill.name}}" disabled>
         </div>
       </table>
     </div>
     <div class="skill">
-      <h2 class="button-secondary">Communication</h2>
+      <h2 class="button">Communication</h2>
       <table>
         <tr>
-          <td class="label"><img src="assets/img/fr.svg"/></td>
-          <td><span class="label">native language</span></td>
+          <td><img src="assets/img/fr.svg"/></td>
+          <td><span>native language</span></td>
         </tr>
         <tr>
-          <td class="label"><img src="assets/img/en.svg"/></td>
+          <td><img src="assets/img/en.svg"/></td>
           <td>
-            <span class="label">operational</span>
+            <span>operational</span>
           </td>
         </tr>
       </table>

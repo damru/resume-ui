@@ -48,7 +48,6 @@
   /*****************
   * BOOTSTRAP OVERRIDE
   ******************/
-  --bs-body-bg: var(--theme-background-color);
   --bs-body-font-family: var(--theme-font-family);
   --bs-body-font-size: var(--theme-font-size-medium);
 }
@@ -78,8 +77,8 @@ h1 {
 }
 
 h2 {
-  font-size: var(--theme-font-size-large);
   color: var(--theme-font-color);
+  font-size: var(--theme-font-size-large);
 }
 
 a {
@@ -97,56 +96,31 @@ a {
   color: red;
 }
 
-.button-primary {
-  background-color: var(--theme-primary-color);
+.button {
+  background-color: var(--theme-background-color);
   border-radius: calc(1em / 3);
-  color: var(--theme-primary-font-color);
+  border: 1px solid var(--theme-background-color);
+  color: var(--theme-font-color);
 }
 
-.button-primary-neg {
-  border: 1px solid var(--theme-primary-color);
-  background-color: var(--theme-primary-font-color);
-  border-radius: calc(1em / 3);
-  color: var(--theme-primary-color);
+.negative {
+  background-color: var(--theme-font-color);
+  color: var(--theme-background-color);
 }
 
-.button-secondary {
-  background-color: var(--theme-secondary-color);
-  border-radius: calc(1em / 3);
-  color: var(--theme-secondary-font-color);
+.secondary {
+  --theme-background-color: var(--theme-secondary-color);
+  --theme-font-color: var(--theme-secondary-font-color);
 }
 
-.button-secondary-neg {
-  border: 1px solid var(--theme-secondary-color);
-  background-color: var(--theme-secondary-font-color);
-  border-radius: calc(1em / 3);
-  color: var(--theme-secondary-color);
+.tertiary {
+  --theme-background-color: var(--theme-tertiary-color);
+  --theme-font-color: var(--theme-tertiary-font-color);
 }
 
-.button-tertiary {
-  background-color: var(--theme-tertiary-color);
-  border-radius: calc(1em / 3);
-  color: var(--theme-tertiary-font-color);
-}
-
-.button-tertiary-neg {
-  border: 1px solid var(--theme-tertiary-color);
-  background-color: var(--theme-tertiary-font-color);
-  border-radius: calc(1em / 3);
-  color: var(--theme-tertiary-color);
-}
-
-.button-quaternary {
-  background-color: var(--theme-quaternary-color);
-  border-radius: calc(1em / 3);
-  color: var(--theme-quaternary-font-color);
-}
-
-.button-quaternary-neg {
-  border: 1px solid var(--theme-quaternary-color);
-  background-color: var(--theme-quaternary-font-color);
-  border-radius: calc(1em / 3);
-  color: var(--theme-quaternary-color);
+.quaternary {
+  --theme-background-color: var(--theme-quaternary-color);
+  --theme-font-color: var(--theme-quaternary-font-color);
 }
 
 .location {

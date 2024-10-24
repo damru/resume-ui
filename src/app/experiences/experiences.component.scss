@@ -18,15 +18,15 @@
     padding: 2px 5px;
     margin: 0;
     font-weight: bold;
+    font-size: var(--theme-font-size-smaller);
   }
 
   .duration {
     color: var(--theme-font-color-lighter);
-    font-size: .9em;
+    font-size: var(--theme-font-size-smaller);
   }
 
   .timeline {
-    font-size: var(--theme-font-size-smaller);
     padding-top: 2px;
     padding-right: 0;
 
