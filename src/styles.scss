@@ -31,7 +31,9 @@
   --theme-font-color-light: var(--grey);
   --theme-font-color-lighter: var(--lightgrey);
   --theme-font-family: "Open Sans";
-  --theme-font-size-medium: .875rem;
+  --theme-font-size-larger: 1.3rem;
+  --theme-font-size-large: 1rem;
+  --theme-font-size-medium: .85rem;
   --theme-font-size-smaller: .7rem;
   --theme-primary-color: var(--darkgrey);
   --theme-primary-font-color: var(--white);
@@ -64,13 +66,13 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 1.8em;
+  font-size: var(--theme-font-size-larger);
   color: var(--theme-font-color);
   text-transform: uppercase;
 }
 
 h2 {
-  font-size: 1.3em;
+  font-size: var(--theme-font-size-large);
   color: var(--theme-font-color);
 }
 
@@ -79,12 +81,6 @@ a {
 
   &:hover {
     color: var(--theme-font-color);
-  }
-}
-
-@media print {
-  .pagebreak {
-    page-break-before: always;
   }
 }
 
@@ -172,4 +168,18 @@ img.pinpoint {
   line-height: 0;
   padding: 0;
   margin: 0;
+}
+
+/*****************
+* MEDIA QUERIES
+*****************/
+@media print {
+  :root {
+    --theme-font-size-medium: .7rem;
+    --theme-font-size-smaller: .5rem
+  }
+
+  .pagebreak {
+    page-break-before: always;
+  }
 }

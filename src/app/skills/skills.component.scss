@@ -1,6 +1,6 @@
 #skills {
   --range-height: 1px;
-  --range-track-size: 20px;
+  --range-track-size: calc(var(--theme-font-size-medium) * 1.4);
   margin: 0 0 40px;
   padding: 0 15px;
 
