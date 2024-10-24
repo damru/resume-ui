@@ -1,18 +1,14 @@
-#education {
+.school, .schoolbis {
+  font-weight: bold;
+}
 
-  .school, .schoolbis {
-    font-weight: bold;
-  }
+.minor {
+  color: var(--theme-background-color);
+  font-size: var(--theme-font-size-smaller);
+}
 
-  .minor {
-    color: var(--theme-background-color);
-    font-size: var(--theme-font-size-smaller);
-  }
-
-  .eq-diploma {
-    display: block;
-    font-size: 0.75em;
-    color: var(--theme-font-color-light);
-  }
-
+.eq-diploma {
+  display: block;
+  font-size: 0.75em;
+  color: var(--theme-font-color-light);
 }

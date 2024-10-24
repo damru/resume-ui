@@ -1,20 +1,15 @@
 #skills {
   --range-height: 1px;
   --range-track-size: calc(var(--theme-font-size-medium) * 1.4);
-
-  margin: 0 0 40px;
-  padding: 0 15px;
-
-  h1 {
-    text-align: center;
-    text-transform: uppercase;
-  }
-
-  .d-flex {
-    gap: 20px;
-  }
 }
 
+h1 {
+  text-align: center;
+}
+
+.d-flex {
+  gap: 20px;
+}
 
 .skill {
   flex: 1 1 100%;
