@@ -38,6 +38,7 @@ jobs:
         with:
           token: ${{ github.token }}
           branch: ${{ github.ref_name }}
+          minorList: feat, feature, features, chore, chores
       - name: "Generate release"
         env:
           GH_TOKEN: ${{ secrets.token || secrets.GH_TOKEN }}
