@@ -42,8 +42,12 @@ jobs:
         with:
           fetch-depth: 0
       - run: npm version from-git --no-git-tag-version || true
-      - id: version
-        run: echo "version=$(npm version ${{ env.SEMVER }} --no-git-tag-version)" >> $GITHUB_OUTPUT
+      - name: "Get Next Version"
+        id: semver
+        uses: ietf-tools/semver-action@v1
+        with:
+          token: ${{ github.token }}
+          branch: ${{ github.ref_name }}
       - name: "Generate release"
         env:
           GH_TOKEN: ${{ secrets.token || secrets.GH_TOKEN }}
