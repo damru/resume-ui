@@ -12,23 +12,37 @@
 * VARIABLES
 *****************/
 :root {
-  --blue: #325886;
-  --darkgrey: #222222;
-  --darkgreen: #688162;
-  --emerald: #50c878;
-  --emerald-lighter: #d6f2e0;
-  --green: #90B289;
-  --grey: #707f70;
-  --lightgreen: #b6ceb1;
-  --lightgrey: #bbbfbb;
-  --redish: #ff5252;
-  --white: #ffffff;
+  --blue: rgb(var(--blue-rgb));
+  --blue-rgb: 50, 88, 134;
+  --darkgrey: rgb(var(--darkgrey-rgb));
+  --darkgrey-rgb: 34, 34, 34;
+  --darkgreen: rgb(var(--darkgreen-rgb));
+  --darkgreen-rgb: 104, 129, 98;
+  --emerald: rgb(var(--emerald-rgb));
+  --emerald-rgb: 80, 200, 120;
+  --emerald-lighter: rgb(var(--emerald-lighter-rgb));
+  --emerald-lighter-rgb: 214, 242, 224;
+  --green: rgb(var(--green-rgb));
+  --green-rgb: 144, 185, 137;
+  --grey: rgb(var(--grey-rgb));
+  --grey-rgb: 112, 127, 112;
+  --lightgreen: rgb(var(--lightgreen-rgb));
+  --lightgreen-rgb: 182, 206, 177;
+  --lightgrey: rgb(var(--lightgrey-rgb));
+  --lightgrey-rgb: 187, 191, 187;
+  --redish: rgb(var(--redish-rgb));
+  --redish-rgb: 255, 82, 82;
+  --white: rgb(var(--white-rgb));
+  --white-rgb: 255, 255, 255;
 
   /*****************
   * THEMING
   ******************/
   --theme-background-color: var(--white);
+  --theme-background-color-rgb: var(--white-rgb);
+  --theme-blur-size: 10px;
   --theme-font-color: var(--darkgrey);
+  --theme-font-color-rgb: var(--darkgrey-rgb);
   --theme-font-color-light: var(--grey);
   --theme-font-color-lighter: var(--lightgrey);
   --theme-font-family: "Open Sans";
@@ -36,14 +50,23 @@
   --theme-font-size-large: 1rem;
   --theme-font-size-medium: .85rem;
   --theme-font-size-smaller: .7rem;
+  --theme-opacity: .8;
   --theme-primary-color: var(--darkgrey);
+  --theme-primary-color-rgb: var(--darkgrey-rgb);
   --theme-primary-font-color: var(--white);
+  --theme-primary-font-color-rgb: var(--white-rgb);
   --theme-secondary-color: var(--redish);
+  --theme-secondary-color-rgb: var(--redish-rgb);
   --theme-secondary-font-color: var(--white);
+  --theme-secondary-font-color-rgb: var(--white-rgb);
   --theme-tertiary-color: var(--emerald);
+  --theme-tertiary-color-rgb: var(--emerald-rgb);
   --theme-tertiary-font-color: var(--white);
+  --theme-tertiary-font-color-rgb: var(--white-rgb);
   --theme-quaternary-color: var(--blue);
+  --theme-quaternary-color-rgb: var(--blue-rgb);
   --theme-quaternary-font-color: var(--white);
+  --theme-quaternary-font-color-rgb: var(--white-rgb);
 
   /*****************
   * BOOTSTRAP OVERRIDE
@@ -63,7 +86,7 @@ body {
 
 h1, h2 {
   padding: 10px 0;
-  font-family: "Alata";
+  font-family: "Alata", sans-serif;
 }
 
 h1 {
@@ -98,8 +121,8 @@ a {
 
 .button {
   background-color: var(--theme-background-color);
-  border-radius: calc(1em / 3);
   border: 1px solid var(--theme-background-color);
+  border-radius: calc(1em / 3);
   color: var(--theme-font-color);
 }
 
@@ -108,19 +131,30 @@ a {
   color: var(--theme-background-color);
 }
 
+h1.negative {
+  background-color: rgba(var(--theme-font-color-rgb), var(--theme-opacity));
+  backdrop-filter: blur(var(--theme-blur-size));
+}
+
 .secondary {
   --theme-background-color: var(--theme-secondary-color);
+  --theme-background-color-rgb: var(--theme-secondary-color-rgb);
   --theme-font-color: var(--theme-secondary-font-color);
+  --theme-font-color-rgb: var(--theme-secondary-font-color-rgb);
 }
 
 .tertiary {
   --theme-background-color: var(--theme-tertiary-color);
+  --theme-background-color-rgb: var(--theme-tertiary-color-rgb);
   --theme-font-color: var(--theme-tertiary-font-color);
+  --theme-font-color-rgb: var(--theme-tertiary-font-color-rgb);
 }
 
 .quaternary {
   --theme-background-color: var(--theme-quaternary-color);
+  --theme-background-color-rgb: var(--theme-quaternary-color-rgb);
   --theme-font-color: var(--theme-quaternary-font-color);
+  --theme-font-color-rgb: var(--theme-quaternary-font-color-rgb);
 }
 
 .location {
