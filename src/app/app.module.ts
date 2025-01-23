@@ -10,17 +10,17 @@ import { ScholarshipComponent } from './experiences/scholarship/scholarship.comp
 
 @NgModule({
   declarations: [
+  ],
+  imports: [
+    BrowserModule,
+    NgbModule, 
     AppComponent,
     SkillsComponent,
     ExperiencesComponent,
     JobsComponent,
     ScholarshipComponent
   ],
-  imports: [
-    BrowserModule,
-    NgbModule, 
-  ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: []
 })
 export class AppModule { }
