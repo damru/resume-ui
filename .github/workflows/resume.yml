@@ -3,7 +3,6 @@ name: Resume Pipeline
 on:
   workflow_dispatch:
 
-
 jobs:
   npm-build:
     runs-on: ubuntu-latest

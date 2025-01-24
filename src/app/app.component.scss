@@ -1,83 +1,84 @@
 #personal-details {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  font-family: "Alata", sans-serif;
-  background-color: rgba(var(--theme-background-color-rgb), var(--theme-opacity));
-  backdrop-filter: blur(var(--theme-blur-size));
-  padding-bottom: 30px;
-  padding-top: 30px;
-  border-bottom: 5px dotted var(--theme-font-color-lighter);
-
-  #name, #position {
-    text-align: justify;
-    text-transform: capitalize;
-    line-height: .9em;
-  }
-
-  #name {
-    font-size: 2.3rem;
-    font-weight: bold;
-  }
-
-  #position {
-    font-size: 1.8rem;
-    font-weight: lighter;
-    color: var(--theme-font-color-light);
-    padding-left: .5em;
-  }
-
-  #contact {
-    font-size: .9em;
-    max-width: 250px;
-    color: var(--theme-font-color-light);
-
-    img.pinpoint {
-      opacity: .5;
-      margin-right: 5px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    font-family: "Alata", sans-serif;
+    background-color: rgba(var(--theme-background-color-rgb), var(--theme-opacity));
+    backdrop-filter: blur(var(--theme-blur-size));
+    padding-bottom: 30px;
+    padding-top: 30px;
+    border-bottom: 5px dotted var(--theme-font-color-lighter);
+  
+    #name, #position {
+      text-align: justify;
+      text-transform: capitalize;
+      line-height: .9em;
+    }
+  
+    #name {
+      font-size: 2.3rem;
+      font-weight: bold;
+    }
+  
+    #position {
+      font-size: 1.8rem;
+      font-weight: lighter;
+      color: var(--theme-font-color-light);
+      padding-left: .5em;
+    }
+  
+    #contact {
+      font-size: .9em;
+      max-width: 250px;
+      color: var(--theme-font-color-light);
+  
+      img.pinpoint {
+        opacity: .5;
+        margin-right: 5px;
+      }
     }
   }
-}
-
-#powered-by {
-  opacity: 0.5;
-  font-family: "Pacifico", cursive;
-  font-display: swap;
-  text-align: center;
-  margin: 30px auto;
-  padding: 30px 0 0 0;
-  border-top: 5px dotted var(--theme-font-color-lighter);
-
-  .code {
-    font-size: 5em;
-    color: var(--lightgrey);
-    font-family: monospace;
+  
+  #powered-by {
+    opacity: 0.5;
+    font-family: "Pacifico", cursive;
     font-display: swap;
+    text-align: center;
+    margin: 30px auto;
+    padding: 30px 0 0 0;
+    border-top: 5px dotted var(--theme-font-color-lighter);
+  
+    .code {
+      font-size: 5em;
+      color: var(--lightgrey);
+      font-family: monospace;
+      font-display: swap;
+    }
   }
-}
-
-@media (max-width: 576px) {
-  #contact {
-    max-width: 100% !important;
-    margin-top: 10px;
-
-    span {
-      display: inline-block;
-
-      &:not(:first-child):before {
-        content: "|";
-        margin: 0 5px;
-      }
-
-      &:first-child::before {
-        content: "";
+  
+  @media (max-width: 576px) {
+    #contact {
+      max-width: 100% !important;
+      margin-top: 10px;
+  
+      span {
+        display: inline-block;
+  
+        &:not(:first-child):before {
+          content: "|";
+          margin: 0 5px;
+        }
+  
+        &:first-child::before {
+          content: "";
+        }
       }
     }
   }
-}
-
-@media print {
-  #personal-details {
-    position: initial;
+  
+  @media print {
+    #personal-details {
+      position: initial;
+    }
   }
-}
+  

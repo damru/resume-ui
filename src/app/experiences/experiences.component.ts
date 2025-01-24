@@ -1,21 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { DateUtils } from '../shared/date-utils';
+import { Component } from '@angular/core';
+import { JobsComponent } from '../jobs/jobs.component'
+import { ScholarshipComponent } from '../scholarship/scholarship.component'
 
 @Component({
-    selector: 'app-experiences',
-    templateUrl: './experiences.component.html',
-    styleUrls: ['./experiences.component.scss'],
-    standalone: false
+  selector: 'app-experiences',
+  imports: [JobsComponent, ScholarshipComponent],
+  templateUrl: './experiences.component.html',
+  styleUrl: './experiences.component.scss'
 })
-export class ExperiencesComponent implements OnInit {
-
-    constructor() { }
-
-    ngOnInit() {
-    }
-
-    getDuration(from: string, to: string) {
-        return DateUtils.duration(from, to);
-    }
+export class ExperiencesComponent {
 
 }

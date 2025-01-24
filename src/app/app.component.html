@@ -1,46 +1,48 @@
 <body>
-<div class="container-lg">
-  <div id="personal-details" class="d-sm-flex d-print-flex section">
-    <div class="d-flex flex-column flex-fill">
-      <span id="name">Damien Rubio</span>
-      <span id="position">Software Engineer</span>
-    </div>
-    <div id="contact" class="d-flex flex-sm-column flex-row flex-fill">
-      <span class="flex-fill"><a href="mailto:job@damienrubio.com">job&#64;damienrubio.com</a></span>
-      <span class="flex-fill"><img class="pinpoint" src="../assets/img/noun_pinpoint_1426597.svg"/>Nantes, France</span>
-    </div>
-  </div>
-  <div class="d-lg-flex">
-    <div class="order-2" style="flex: 3 3 100%; min-width: 290px">
-      <app-skills></app-skills>
-    </div>
-    <div class="order-1" style="flex: 1 1 100%">
-      <app-experiences></app-experiences>
-    </div>
-  </div>
-  <div class="container-fluid d-print-none" id="powered-by">
-    <div class="row experience">
-      <!--                <div class="col-md code"><</div>-->
-      <div class="col-md">
-        <p>
-          Crafted with <span class="heart">&hearts;</span>
-        </p>
-        <p>
-          Powered by <a href="https://www.docker.com/" target="_blank">Docker</a>,
-          <a href="https://www.nginx.com/" target="_blank">Nginx</a>,
-          <a href="https://angular.io/" target="_blank">Angular</a>
-          and <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a><br/>
-          Hosted on a bare metal <a href="https://kubernetes.io/" target="_blank">k8s</a> cluster running on <a
-          href="https://www.talos.dev/" target="_blank">Talos</a> through <a href="https://www.proxmox.com/" target="_blank">proxmox</a>.
-        </p>
-        <p>
-          <a href="https://github.com/damru/resume-ui/" target="_blank"><img style="max-height: 50px"
-                                                                             src="../assets/img/octocat.svg"
-                                                                             title="The code on Github" alt="Github"></a>
-        </p>
+  <div class="container-lg">
+    <div id="personal-details" class="d-sm-flex d-print-flex section">
+      <div class="d-flex flex-column flex-fill">
+        <span id="name">Damien Rubio</span>
+        <span id="position">Software Engineer</span>
       </div>
-      <!--                <div class="col-md code">/></div>-->
+      <div id="contact" class="d-flex flex-sm-column flex-row flex-fill">
+        <span class="flex-fill"><a href="mailto:job@damienrubio.com">job&#64;damienrubio.com</a></span>
+        <span class="flex-fill"><img class="pinpoint" src="img/noun_pinpoint_1426597.svg"/>Nantes, France</span>
+      </div>
+    </div>
+    <div class="d-lg-flex">
+      <div class="order-2" style="flex: 3 3 100%; min-width: 290px">
+        <app-skills></app-skills>
+      </div>
+      <div class="order-1" style="flex: 1 1 100%">
+        <app-experiences></app-experiences>
+      </div>
+    </div>
+    <div class="container-fluid d-print-none" id="powered-by">
+      <div class="row experience">
+        <!--                <div class="col-md code"><</div>-->
+        <div class="col-md">
+          <p>
+            Crafted with <span class="heart">&hearts;</span>
+          </p>
+          <p>
+            Powered by <a href="https://www.docker.com/" target="_blank">Docker</a>,
+            <a href="https://www.nginx.com/" target="_blank">Nginx</a>,
+            <a href="https://angular.io/" target="_blank">Angular</a>
+            and <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a><br/>
+            Hosted on a bare metal <a href="https://kubernetes.io/" target="_blank">k8s</a> cluster running on <a
+            href="https://www.talos.dev/" target="_blank">Talos</a> through <a href="https://www.proxmox.com/" target="_blank">proxmox</a>.
+          </p>
+          <p>
+            <a href="https://github.com/damru/resume-ui/" target="_blank"><img style="max-height: 50px"
+                                                                               src="img/octocat.svg"
+                                                                               title="The code on Github" alt="Github"></a>
+          </p>
+        </div>
+        <!--                <div class="col-md code">/></div>-->
+      </div>
     </div>
   </div>
-</div>
-</body>
+  </body>  
+
+<router-outlet />

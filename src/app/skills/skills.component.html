@@ -1,30 +1,36 @@
 <div id="skills" class="section secondary">
-  <h1 class="negative">Skills</h1>
-  <div class="d-flex flex-lg-column flex-wrap justify-content-center">
-    <div class="skill" *ngFor="let skillCategory of skillCategories">
-      <h2 class="button">{{ skillCategory.name }}</h2>
-      <table>
-        <div *ngFor="let skill of skills">
-          <label *ngIf="skill.categoryId === skillCategory.id" for="{{skill.name}}">{{ skill.name }}</label>
-          <input *ngIf="skill.categoryId === skillCategory.id" type="range" class="skill-range" value="{{skill.levelBase100}}"
-                 id="{{skill.name}}" name="{{skill.name}}" disabled>
+    <h1 class="negative">Skills</h1>
+    <div class="d-flex flex-lg-column flex-wrap justify-content-center">
+    @for (skillCategory of skillCategories; track skillCategory) {
+        <div class="skill">
+          <h2 class="button">{{ skillCategory.name }}</h2>
+          <table>
+          @for (skill of skills; track skill) {
+              <div>
+              @if (skill.categoryId === skillCategory.id) {
+                  <label>{{ skill.name }}</label>
+                  <input type="range" class="skill-range" value="{{skill.levelBase100}}" id="{{skill.name}}" name="{{skill.name}}" disabled>
+              }
+              </div>
+          }
+          </table>
         </div>
-      </table>
-    </div>
-    <div class="skill">
-      <h2 class="button">Communication</h2>
-      <table>
-        <tr>
-          <td><img src="assets/img/fr.svg"/></td>
-          <td><span>native language</span></td>
-        </tr>
-        <tr>
-          <td><img src="assets/img/en.svg"/></td>
-          <td>
-            <span>operational</span>
-          </td>
-        </tr>
-      </table>
+    }
+      <div class="skill">
+        <h2 class="button">Communication</h2>
+        <table>
+          <tr>
+            <td><img src="img/fr.svg"/></td>
+            <td><span>native language</span></td>
+          </tr>
+          <tr>
+            <td><img src="img/en.svg"/></td>
+            <td>
+              <span>operational</span>
+            </td>
+          </tr>
+        </table>
+      </div>
     </div>
   </div>
-</div>
+  
