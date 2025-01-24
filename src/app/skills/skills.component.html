@@ -4,7 +4,6 @@
     @for (skillCategory of skillCategories; track skillCategory) {
         <div class="skill">
           <h2 class="button">{{ skillCategory.name }}</h2>
-          <table>
           @for (skill of skills; track skill) {
               <div>
               @if (skill.categoryId === skillCategory.id) {
@@ -13,7 +12,6 @@
               }
               </div>
           }
-          </table>
         </div>
     }
       <div class="skill">
