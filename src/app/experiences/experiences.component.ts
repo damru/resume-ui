@@ -4,7 +4,8 @@ import { DateUtils } from '../shared/date-utils';
 @Component({
     selector: 'app-experiences',
     templateUrl: './experiences.component.html',
-    styleUrls: ['./experiences.component.scss']
+    styleUrls: ['./experiences.component.scss'],
+    standalone: false
 })
 export class ExperiencesComponent implements OnInit {
 

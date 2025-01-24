@@ -15,11 +15,12 @@
       },
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/resume",
+            "outputPath": {
+              "base": "dist/resume"
+            },
             "index": "src/index.html",
-            "main": "src/main.ts",
             "polyfills": [
               "src/polyfills.ts",
               "@angular/localize/init"
@@ -34,7 +35,8 @@
             ],
             "scripts": [
               "node_modules/datediff/datediff.min.js"
-            ]
+            ],
+            "browser": "src/main.ts"
         },
           "configurations": {
             "production": {
@@ -50,8 +52,6 @@
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
