@@ -5,12 +5,13 @@
         <div class="skill">
           <h2 class="button">{{ skillCategory.name }}</h2>
           @for (skill of skills; track skill) {
-              <div>
-              @if (skill.categoryId === skillCategory.id) {
-                  <label>{{ skill.name }}</label>
-                  <input type="range" class="skill-range" value="{{skill.levelBase100}}" id="{{skill.name}}" name="{{skill.name}}" disabled>
-              }
+            @if (skill.categoryId === skillCategory.id) {
+              <div class="d-flex align-items-center">
+                  <span class="col-6">{{ skill.name }}</span>
+                  <progress class="progress-bar" value="{{skill.levelBase100}}" max="100"></progress>
+                  <!-- <span class="col-6"><input type="range" class="skill-range" value="{{skill.levelBase100}}" id="{{skill.name}}" name="{{skill.name}}" disabled></span> -->
               </div>
+            }
           }
         </div>
     }

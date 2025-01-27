@@ -85,7 +85,6 @@ body {
 }
 
 h1, h2 {
-  padding: 10px 0;
   font-family: "Alata", sans-serif;
 }
 
@@ -97,9 +96,12 @@ h1 {
   color: var(--theme-font-color);
   font-size: var(--theme-font-size-larger);
   text-transform: uppercase;
+  margin: 0 -15px;
+  padding: 10px 15px;
 }
 
 h2 {
+  padding: 10px 0;
   color: var(--theme-font-color);
   font-size: var(--theme-font-size-large);
 }

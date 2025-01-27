@@ -1,93 +1,69 @@
-#skills {
-    --range-height: 1px;
-    --range-track-size: calc(var(--theme-font-size-medium) * 1.4);
-  }
+h1 {
+  text-align: center;
+}
+
+.d-flex {
+  gap: 20px;
+}
+
+.skill {
+  flex: 1 1 100%;
+}
+
+.skill h2 {
+  padding: 10px 8px;
+  font-weight: bold;
+}
   
-  h1 {
-    text-align: center;
+.skill > div , .skill table td {
+  padding: 2px 10px;
+}
+
+.skill img {
+  width: 30px;
+}
+
+/*
+progress bars
+*/
+progress {
+  appearance: none;
+  height: calc(var(--theme-font-size-medium) * 1.4 + 2px);
+  --bs-background-bg: var(--theme-font-color-lighter);
+  --bs-background-color: var(--theme-secondary-color);
+}
+progress::-webkit-progress-bar {
+  background-color: var(--theme-font-color-lighter);
+  border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+  background: var(--theme-secondary-color);
+  border-radius: 10px;
+}
+
+progress::-moz-progress-bar {
+  background-color: var(--theme-secondary-color);
+  border-radius: 10px;
+}
+
+@media (max-width: 992px) {
+  #skills .d-flex {
+    gap: 10px;
   }
-  
-  .d-flex {
-    gap: 20px;
-  }
-  
+
   .skill {
-    flex: 1 1 100%;
+    flex: 1 1 calc(50% - 20px);
   }
-  
-  .skill h2 {
-    padding: 10px 8px;
-    font-weight: bold;
+}
+
+@media print {
+  div {
+    float: none !important;
   }
-  
-  .skill table {
-    width: 100%;
+
+  .skill {
+    display: inline-block;
+    float: none !important;
   }
-  
-  .skill > div , .skill table td {
-    padding: 0 10px
-  }
-  
-  .skill div label {
-    width: 50%;
-    max-width: 50%;
-    padding-bottom: 2px;
-  }
-  
-  .skill img {
-    width: 30px;
-  }
-  
-  /*
-  progress bars
-  */
-  .skill-range {
-    -webkit-appearance: none;
-    appearance: none;
-    height: var(--range-height);
-    width: 50%;
-    background: var(--theme-font-color-lighter);
-    outline: none;
-    vertical-align: middle;
-  }
-  
-  // thumb
-  .skill-range::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: var(--range-track-size);
-    height: var(--range-track-size);
-    background-color: var(--theme-secondary-color);
-    border-radius: 50%;
-  }
-  
-  .skill-range::-moz-range-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: var(--range-track-size);
-    height: var(--range-track-size);
-    background-color: var(--theme-secondary-color);
-    border-radius: 50%;
-  }
-  
-  @media (max-width: 992px) {
-    #skills .d-flex {
-      gap: 10px;
-    }
-  
-    .skill {
-      flex: 1 1 calc(50% - 20px);
-    }
-  }
-  
-  @media print {
-    div {
-      float: none !important;
-    }
-  
-    .skill {
-      display: inline-block;
-      float: none !important;
-    }
-  }
-  
+}
