@@ -27,24 +27,23 @@ h1 {
 progress bars
 */
 progress {
+  --bs-progress-bar-bg: rgba(var(--theme-secondary-color-rgb), calc(1 - var(--theme-opacity)));
+  --bs-progress-bar-color: var(--theme-secondary-color);
   appearance: none;
   height: calc(var(--theme-font-size-medium) * 1.4 + 2px);
-  --bs-background-bg: var(--theme-font-color-lighter);
-  --bs-background-color: var(--theme-secondary-color);
+  border-radius: 10px;
 }
 progress::-webkit-progress-bar {
-  background-color: var(--theme-font-color-lighter);
-  border-radius: 10px;
+  background-color: var(--bs-progress-bar-bg);
 }
 
 progress::-webkit-progress-value {
-  background: var(--theme-secondary-color);
+  background: var(--bs-progress-bar-color);
   border-radius: 10px;
 }
 
 progress::-moz-progress-bar {
-  background-color: var(--theme-secondary-color);
-  border-radius: 10px;
+  background-color: var(--bs-progress-bar-color);
 }
 
 @media (max-width: 992px) {
