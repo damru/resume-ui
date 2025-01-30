@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Scholarship } from './scholarship.model';
+import { ScholarshipService } from './scholarship.service';
 
 @Component({
   selector: 'app-scholarship',
@@ -8,4 +10,9 @@ import { Component } from '@angular/core';
 })
 export class ScholarshipComponent {
 
+  scholarships: Scholarship[];
+
+  constructor(private scholarshipService: ScholarshipService) { 
+    this.scholarships = this.scholarshipService.getScholarships();
+  }
 }

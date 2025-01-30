@@ -1,5 +1,5 @@
-import { Skill } from './skill';
-import { SkillCategory } from './skill-category';
+import { Skill } from './skill.model';
+import { SkillCategory } from './skill-category.model';
 
 export const SKILLS: Skill[] = [
     { name: 'API Design', levelBase100: 100, order: 0, categoryId: 1 },
@@ -40,18 +40,13 @@ export const SKILLS: Skill[] = [
     { name: 'Buildpacks', levelBase100: 70, order: 0, categoryId: 3 },
     { name: 'Jib', levelBase100: 90, order: 0, categoryId: 3 },
     { name: 'Kaniko', levelBase100: 90, order: 0, categoryId: 3 },
-    //
-    // { name: 'Unix', levelBase100: 90, order: 0, categoryId: 4 },
-    // { name: 'Windows', levelBase100: 90, order: 0, categoryId: 4 },
-    //
-    { name: 'SQL', levelBase100: 95, order: 0, categoryId: 5 },
-    { name: 'MongoDB', levelBase100: 70, order: 0, categoryId: 5 }
+    { name: 'SQL', levelBase100: 95, order: 0, categoryId: 4 },
+    { name: 'MongoDB', levelBase100: 70, order: 0, categoryId: 4 }
 ];
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
-    { id: 1, name: 'Architecture / Methodology', name_fr: 'Architecture / Méthodologie', order: 0 },
-    { id: 2, name: 'Languages / Frameworks', name_fr: 'Langages / Frameworks', order: 0 },
-    { id: 3, name: 'Industrialization / Platforms', name_fr: 'Industrialisation / Plateformes', order: 0 },
-    // { id: 4, name: 'OS', name_fr: 'OS', order: 10 },
-    { id: 5, name: 'Databases', name_fr: 'Bases de données', order: 0 }
+    { id: 1, name: 'Architecture / Methodology', order: 0 },
+    { id: 2, name: 'Languages / Frameworks', order: 0 },
+    { id: 3, name: 'Industrialization / Platforms', order: 0 },
+    { id: 4, name: 'Databases', order: 0 }
 ];
