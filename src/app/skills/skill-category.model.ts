@@ -1,8 +1,7 @@
-import { Skill } from './skill';
+import { Skill } from './skill.model';
 
 export class SkillCategory {
     id!: number;
     name!: string;
     order!: number;
-    name_fr!: string;
 }

@@ -1,35 +1,33 @@
 <div id="skills" class="section secondary">
-    <h1 class="negative">Skills</h1>
-    <div class="d-flex flex-lg-column flex-wrap justify-content-center">
+  <h1 class="negative position-sticky">Skills</h1>
+  <div class="d-flex flex-lg-column flex-wrap justify-content-center">
     @for (skillCategory of skillCategories; track skillCategory) {
-        <div class="skill">
-          <h2 class="button">{{ skillCategory.name }}</h2>
-          @for (skill of skills; track skill) {
-            @if (skill.categoryId === skillCategory.id) {
-              <div class="d-flex align-items-center">
-                  <span class="col-6">{{ skill.name }}</span>
-                  <progress class="progress-bar" value="{{skill.levelBase100}}" max="100"></progress>
-                  <!-- <span class="col-6"><input type="range" class="skill-range" value="{{skill.levelBase100}}" id="{{skill.name}}" name="{{skill.name}}" disabled></span> -->
-              </div>
-            }
-          }
-        </div>
-    }
-      <div class="skill">
-        <h2 class="button">Communication</h2>
-        <table>
-          <tr>
-            <td><img src="img/fr.svg"/></td>
-            <td><span>native language</span></td>
-          </tr>
-          <tr>
-            <td><img src="img/en.svg"/></td>
-            <td>
-              <span>operational</span>
-            </td>
-          </tr>
-        </table>
+    <div class="skill">
+      <h2 class="button">{{ skillCategory.name }}</h2>
+      @for (skill of skills; track skill) {
+      @if (skill.categoryId === skillCategory.id) {
+      <div class="d-flex align-items-center">
+        <span class="col-6">{{ skill.name }}</span>
+        <progress class="progress-bar" value="{{skill.levelBase100}}" max="100"></progress>
       </div>
+      }
+      }
+    </div>
+    }
+    <div class="skill">
+      <h2 class="button">Communication</h2>
+      <table>
+        <tr>
+          <td><img src="img/fr.svg" /></td>
+          <td><span>native language</span></td>
+        </tr>
+        <tr>
+          <td><img src="img/en.svg" /></td>
+          <td>
+            <span>operational</span>
+          </td>
+        </tr>
+      </table>
     </div>
   </div>
-  
+</div>

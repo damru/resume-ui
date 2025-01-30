@@ -5,10 +5,10 @@ export class Job implements Experience {
     id!: number;
     startDate!: string;
     endDate!: string;
-    location!: string;
+    locations!: string[];
     company!: string;
+    title!: string;
     tasks!: string[];
-    tasks_fr!: string[];
     skills!: string[];
 
 }
