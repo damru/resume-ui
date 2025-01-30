@@ -1,80 +1,36 @@
 <div id="education" class="section quaternary">
   <h1 class="negative position-sticky">education</h1>
+  @for (scholarship of scholarships; track scholarship) {
   <div class="row experience">
     <div class="col-2 timeline">
-      <div class="button interval">2009 - 2012</div>
+      <div class="button interval">{{ scholarship.startDate }} - {{ scholarship.endDate }}</div>
     </div>
     <div class="col-10">
-      <h2 class="container-fluid button negative">Diplôme d'Ingénieur<span class="eq-diploma">Master of Science in
-          Engineering</span>
+      <h2 class="container-fluid button negative">
+        <span>{{ scholarship.diploma }}</span>
+        <span class="eq-diploma">{{ scholarship.diploma_ca }}</span>
       </h2>
-      <span class="school">ECE Paris École d’Ingénieurs</span>
-      <div class="location">
-        <img class="pinpoint" src="img/noun_pinpoint_1426597.svg" />
-        <span>Paris, France</span>
+      @for (school of scholarship.schools; track school) {
+      <div class="school">
+        <div class="school-name">
+          <span>{{ school.name }}</span>
+          @if (school.period) {
+          &nbsp;<span class="button negative interval">{{ school.period }}</span>
+          }
+        </div>
+        <div class="location">
+          <img class="pinpoint" src="img/noun_pinpoint_1426597.svg" />
+          <span>{{ school.location }}</span>
+        </div>
+        <div>
+          <span class="major">Major {{ school.major }}</span>
+          @if (school.minor) {
+          <span class="minor"> &bull; Minor {{ school.minor }}</span>
+          }
+        </div>
       </div>
-      <span class="major">Major Information Technologies</span><span class="minor"> // Minor Audiovisual &
-        Multimedia</span>
-      <div class="schoolbis">Concordia University <span class="button negative interval">sept. – dec. 2011</span></div>
-      <div class="location">
-        <img class="pinpoint" src="img/noun_pinpoint_1426597.svg" />
-        <span>Montreal, QC, Canada</span>
-      </div>
-      <div class="minor">Computer Science</div>
+      }
     </div>
   </div>
-  <div class="row experience">
-    <div class="col-2 timeline">
-      <div class="button interval">2007 - 2009</div>
-    </div>
-    <div class="col-10">
-      <h2 class="container-fluid button negative">Diplôme Universitaire de Technologie (DUT) Informatique<span
-          class="eq-diploma">Bachelor of Science in Engineering</span></h2>
-      <span class="school">IUT de Montreuil Université Paris 8</span>
-      <div class="location">
-        <img class="pinpoint" src="img/noun_pinpoint_1426597.svg" />
-        <span>Montreuil, France</span>
-      </div>
-      <span class="major">Major Software Development</span><span class="minor"> // Minor Software Development</span>
-      <div class="schoolbis">Wrexham Glyndwr University <span class="button negative interval">june – aug. 2008</span>
-      </div>
-      <div class="location">
-        <img class="pinpoint" src="img/noun_pinpoint_1426597.svg" />
-        <span>Wrexham, Wales</span>
-      </div>
-      <div class="minor">Applied Computing</div>
-    </div>
-  </div>
-  <div class="row experience">
-    <div class="col-2 timeline">
-      <div class="button interval">2004 - 2007</div>
-    </div>
-    <div class="col-10">
-      <h2 class="container-fluid button negative">Diplôme d'Etudes Universitaires Générales (DEUG) d'Admistration
-        Economique
-        et
-        Sociale<span class="eq-diploma">Bachelor of Social sciences and Economics</span></h2>
-      <span class="school">Université Paris 1 Panthéon-Sorbonne</span>
-      <div class="location">
-        <img class="pinpoint" src="img/noun_pinpoint_1426597.svg" />
-        <span>Paris, France</span>
-      </div>
-    </div>
-  </div>
-  <div class="row experience">
-    <div class="col-2 timeline">
-      <div class="button interval">2001 - 2004</div>
-    </div>
-    <div class="col-10">
-      <h2 class="container-fluid button negative">Baccalauréat Economique et Social<span class="eq-diploma">French
-          High-School
-          diploma in Economics And Social Science</span></h2>
-      <span class="school">Lycée Romain Rolland</span>
-      <div class="location">
-        <img class="pinpoint" src="img/noun_pinpoint_1426597.svg" />
-        <span>Ivry-Sur-Seine, France</span>
-      </div>
-      <div class="major">Major Economics</div>
-    </div>
-  </div>
+  }
 </div>

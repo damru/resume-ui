@@ -1,14 +1,8 @@
-import { Experience } from '../experiences/experience.model';
+export class School {
 
-export class School implements Experience {
-
-    id!: number;
-    startDate!: string;
-    endDate!: string;
-    locations!: string[];
-    diploma!: string;
-    diploma_ca!: string;
-    school!: string;
+    name!: string;
+    period!: string;
+    location!: string;
     major!: string;
     minor!: string;
 

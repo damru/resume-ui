@@ -14,7 +14,6 @@ import { JobService } from './job.service';
 export class JobsComponent {
 
   jobs: Job[];
-  today: Date = new Date();
 
   constructor(private jobService: JobService) { 
     this.jobs = this.jobService.getJobs();
