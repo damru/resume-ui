@@ -29,9 +29,9 @@ export const SKILLS: Skill[] = [
     // { name: 'Github', levelBase100: 90, order: 15, categoryId: 3 },
     // { name: 'AWS', levelBase100: 20, order: 0, categoryId: 3 },
     // { name: 'Google Cloud', levelBase100: 10, order: 200, categoryId: 3 },
-    { name: 'Docker', levelBase100: 80, order: 0, categoryId: 3 },
-    { name: 'Kubernetes', levelBase100: 70, order: 0, categoryId: 3 },
-    { name: 'Helm', levelBase100: 60, order: 0, categoryId: 3 },
+    { name: 'Docker', levelBase100: 90, order: 0, categoryId: 3 },
+    { name: 'Kubernetes', levelBase100: 90, order: 0, categoryId: 3 },
+    { name: 'Helm', levelBase100: 90, order: 0, categoryId: 3 },
     { name: 'Jenkins', levelBase100: 90, order: 100, categoryId: 3 },
     { name: 'CircleCI', levelBase100: 90, order: 0, categoryId: 3 },
     { name: 'Maven', levelBase100: 100, order: 100, categoryId: 3 },
@@ -39,7 +39,7 @@ export const SKILLS: Skill[] = [
     { name: 'Sonar', levelBase100: 80, order: 100, categoryId: 3 },
     { name: 'Buildpacks', levelBase100: 70, order: 0, categoryId: 3 },
     { name: 'Jib', levelBase100: 90, order: 0, categoryId: 3 },
-    { name: 'Kaniko', levelBase100: 90, order: 0, categoryId: 3 },
+    { name: 'Kaniko', levelBase100: 50, order: 0, categoryId: 3 },
     { name: 'SQL', levelBase100: 95, order: 0, categoryId: 4 },
     { name: 'MongoDB', levelBase100: 70, order: 0, categoryId: 4 }
 ];
